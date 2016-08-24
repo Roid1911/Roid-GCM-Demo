@@ -1,5 +1,7 @@
 # Read Me
 
+https://github.com/Roid1911/Roid-GCM-Demo
+
 Server API Key help
 AIzaSyCXY-zeKSSn0Pg3peLlqqbOR_wt5IdFmqQ
 
@@ -30,4 +32,8 @@ Authorization:key=AIzaSyCXY-zeKSSn0Pg3peLlqqbOR_wt5IdFmqQ
 		"body" : "Hello Push!!!!",
     "sound" : "default"
   },
+  "data" : {
+	"title" : "Hello Title !!",
+	"message" : "받는 것 테스트"
+  }
 }

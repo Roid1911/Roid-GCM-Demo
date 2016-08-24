@@ -96,9 +96,14 @@ public class MainActivity extends AppCompatActivity {
 
         registBroadcastReceiver();
 
+        Intent intent = getIntent(); // 값을 받아온다.
+        String rcvMsg = intent.getStringExtra("msg");
+
         // 토큰을 보여줄 TextView를 정의
         mInformationEditText = (EditText) findViewById(R.id.informationTextView);
         mInformationEditText.setVisibility(View.GONE);
+        mInformationEditText.setText(rcvMsg);
+
         // 토큰을 가져오는 동안 인디케이터를 보여줄 ProgressBar를 정의
         mRegistrationProgressBar = (ProgressBar) findViewById(R.id.registrationProgressBar);
         mRegistrationProgressBar.setVisibility(ProgressBar.GONE);

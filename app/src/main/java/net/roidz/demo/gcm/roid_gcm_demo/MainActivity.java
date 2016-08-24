@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar mRegistrationProgressBar;
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private EditText mInformationEditText;
+    private TextView mInformationTextView;
 
     /**
      * Google Play Service를 사용할 수 있는 환경이지를 체크한다.
@@ -100,9 +102,11 @@ public class MainActivity extends AppCompatActivity {
         String rcvMsg = intent.getStringExtra("msg");
 
         // 토큰을 보여줄 TextView를 정의
-        mInformationEditText = (EditText) findViewById(R.id.informationTextView);
+        mInformationEditText = (EditText) findViewById(R.id.informationEditText);
         mInformationEditText.setVisibility(View.GONE);
-        mInformationEditText.setText(rcvMsg);
+
+        mInformationTextView = (TextView) findViewById(R.id.informationTextView);
+        mInformationTextView.setText(rcvMsg);
 
         // 토큰을 가져오는 동안 인디케이터를 보여줄 ProgressBar를 정의
         mRegistrationProgressBar = (ProgressBar) findViewById(R.id.registrationProgressBar);
